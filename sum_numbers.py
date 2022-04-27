@@ -1,6 +1,9 @@
 number = int(input())
-total_sum = 0
-for _ in range(number):
+sum_of_numbers = 0
+while True:
+    if number <= sum_of_numbers:
+        break
     current_number = int(input())
-    total_sum += current_number
-print(total_sum)
+    sum_of_numbers += current_number
+
+print(sum_of_numbers)
