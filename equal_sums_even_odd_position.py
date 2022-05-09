@@ -1,4 +1,13 @@
-num1 = int(input())
-num2 = int(input())
-if num1 < num2:
-    condition = True
+number1 = int(input())
+number2 = int(input())
+for current_number in range(number1, number2 + 1):
+    odd_digits_sum = 0
+    even_digits_sum = 0
+    current_number_as_string = str(current_number)
+    for index, digit in enumerate(current_number_as_string):
+        if index % 2 == 0:
+            odd_digits_sum += int(digit)
+        else:
+            even_digits_sum += int(digit)
+    if odd_digits_sum == even_digits_sum:
+        print(current_number_as_string, end=' ')
